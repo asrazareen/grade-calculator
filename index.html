@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <title>Grade Calculator</title>
+    <style>
+        body{
+    margin: 0px;
+    padding: 0px;
+    position: fixed;
+}
+.main-container{
+    width:100vw;
+    height:100vh;
+    background-color: antiquewhite;
+    padding: 2rem;
+    margin-right: 2rem;
+}
+.heading{
+    margin: 0px;
+    text-align: center;
+}
+
+.display-con{
+    margin-top: .5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    gap:.5rem
+}
+.left-con{
+    width:100%;
+
+}
+.right-con{
+    width: 85%;
+    height:100%;
+    display: grid;
+    grid-row: 1fr 1fr 1fr;
+    
+}
+.sec-header{
+    color: #FFFFFF;
+    background-color: black;
+    width: 100%;
+    height:3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.marks-con{
+    background-color: brown;
+    height:75vh
+}
+.sublist{
+    padding-top: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:1rem;
+    font-size: 1.5rem;
+    color:antiquewhite
+}
+input{
+    font-size: 1rem;
+    padding: .5rem;
+    border-radius: .5rem;
+}
+button{
+    font-size: 1rem;
+    padding: .5rem;
+    border-radius: .5rem;
+    border: none;
+    background-color: antiquewhite;
+    color: brown;
+    transition: all .3s ease-in-out;
+}
+button:hover{
+    cursor: pointer;
+    background-color: burlywood;
+    filter:brightness(1.1);
+    box-shadow: 5px 5px 10px#430000;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.display{
+    background-color: burlywood;
+    height:78%;
+  
+}
+.score{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color:brown;
+    height: 100%;
+}
+    </style>
+</head>
+<body>
+    <div class="main-container" >
+        <h1 class="heading" >GRADING SYSTEM ASSIGNMENT</h1>
+        <div class="display-con" >
+            <div class="left-con" >
+                <div class="sec-header" >
+                      <h2>Grading System in JS</h2>
+                </div>
+                <div class="marks-con" >
+                    <form class="sublist" submit="gradeCalculator()" >
+                        <div  >
+                            <label for="english" >
+                                English:
+                            </label>
+                            <input type="number" id="english" name="grades" />
+                        </div>
+                        <div>
+                            <label for="maths" >
+                                Maths:
+                            </label>
+                            <input type="number" id="maths" name="grades" />
+                        </div>
+                        <div>
+                            <label for="physics" >
+                                Physics:
+                            </label>
+                            <input type="number" id="physics" name="grades" />
+                        </div>
+                        <div>
+                            <label for="chemistry" >
+                                Chemistry:
+                            </label>
+                            <input type="number" id="chemistry" name="grades" />
+                        </div>
+                        <div>
+                            <label for="computer" >
+                                Computer:
+                            </label>
+                            <input type="number" id="computer" name="grades" />
+                        </div>
+                        <button id="button"  >
+                            Calculate Grades
+                        </button>
+                       
+                    </form>
+                </div>
+              
+            </div>
+            <div class="right-con" > 
+                <div>
+                    <div class="sec-header" >
+                        <h2>Total</h2>
+                    </div>
+                    <div class="display" >
+                        <div id="totalScore" class="score" >
+
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="sec-header" >
+                        <h2>Average</h2>
+                    </div>
+                    <div class="display" >
+                        <div id="average" class="score" >
+                            
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="sec-header" >
+                        <h2>Grade</h2>
+                    </div>
+                    <div class="display" >
+                        <div id="grade" class="score" >
+                            
+                        </div>
+                    </div>
+                </div>
+                
+
+            </div>
+        </div>
+    </div>
+    <script src="./script.js" ></script>
+</body>
+</html>
